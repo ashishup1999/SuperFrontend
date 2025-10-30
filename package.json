@@ -1,0 +1,30 @@
+{
+  "name": "superfrontend",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "packageManager": "yarn@1.22.22",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "nohoist": [
+    "**/tailwindcss",
+    "**/tailwindcss/**"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "web": "yarn workspace web",
+    "mobile": "yarn workspace mobile",
+    "ui-package": "yarn workspace @superfrontend/ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "turbo": "^2.5.8"
+  }
+}
